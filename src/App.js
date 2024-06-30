@@ -1,21 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./header/header";
+import Nav from './nav/nav';
+import Subreddits from './subreddits/subreddits';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div id="theme">
+      <header>
+        <Header />
       </header>
+      <main>
+      <aside className='sidebar'>
+        <div className='navbar'>
+          <Nav />
+        </div>
+        <div>
+          <Subreddits />
+        </div>
+      </aside>
+      <article className='articleList'>
+        <p> Articles </p>
+      </article>
+      <div className='blankSpace'>
+        <p> Blank Space </p>
+      </div>
+      </main>
     </div>
   );
 }

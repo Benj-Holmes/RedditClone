@@ -1,0 +1,35 @@
+.navbar {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #3e4142;
+}
+.navbar img {
+    width: 35px;
+}
+#homebutton {
+    width: 60px;
+    padding-top: 5px;
+    margin-left: -12px;
+}
+.navbar div {
+    width: 95%;
+    display:flex;
+    align-items: center;
+    font-size: 16px;
+    color: #eef1f3;
+}
+.popular a, .all a {
+    margin-left: 15px;
+}
+.home a {
+    margin-top: 10px;
+}
+.popular:hover, .all:hover, .home:hover {
+    background-color: #181c1f;
+}
+.popular:active, .all:active, .home:active {
+    background-color: #2a3236;
+}
