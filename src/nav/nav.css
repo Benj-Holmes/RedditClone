@@ -20,6 +20,7 @@
     align-items: center;
     font-size: 16px;
     color: #eef1f3;
+    cursor: pointer;
 }
 .popular a, .all a {
     margin-left: 15px;

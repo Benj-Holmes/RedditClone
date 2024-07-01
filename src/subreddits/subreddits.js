@@ -3,7 +3,7 @@ import './subreddits.css';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSubreddits } from "../slices/subredditsSlice";
 import { subredditSelector } from "../slices/subredditsSlice";
-//import { SubIcon } from "./subIcon";
+import Sub from './sub.js';
 //import { subSelector } from "../../slices/articlesSlice";
 //import { Link } from "react-router-dom";
 
@@ -19,15 +19,12 @@ export const Subreddits = (props) => {
 
     // console.log(subreddits)
     return (
-        // <div className="sub-box">
-        //     {/* <Link to={'/'} className='link1'> */}
-        //     <div className="subreddits-container">
-        //         {(subreddits != null ) ? subreddits.map((sub, index) => <p key={index} sub={sub.data} /> ) : '' }
-        //     </div>
-        //     {/* </Link> */}
-        // </div>
         <div>
-            Hi!
+            <p className="asideTitles">Communities</p>
+            <div className="subredditsContainer">
+                {(subreddits != null) ? 
+                    subreddits.map((sub, index) => <Sub key={index} sub={sub.data} /> ) : '' }
+            </div>
         </div>
     );
 };

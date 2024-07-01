@@ -1,0 +1,25 @@
+.subContainer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.subContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #eef1f3;
+    margin-bottom: -5px;
+}
+.subContainer:hover {
+    background-color: #181c1f;
+    cursor: pointer;
+}
+.asideTitles {
+    letter-spacing: .1em;
+    color: lightslategrey;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}

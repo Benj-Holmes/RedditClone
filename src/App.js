@@ -2,6 +2,7 @@ import './App.css';
 import Header from "./header/header";
 import Nav from './nav/nav';
 import Subreddits from './subreddits/subreddits';
+import Articles from './articles/articles';
 
 function App() {
   return (
@@ -19,7 +20,12 @@ function App() {
         </div>
       </aside>
       <article className='articleList'>
-        <p> Articles </p>
+        <div>
+          <p> You are Viewing the top posts from 'r/Popular' </p>
+        </div>
+        <div>
+          <Articles />
+        </div>
       </article>
       <div className='blankSpace'>
         <p> Blank Space </p>

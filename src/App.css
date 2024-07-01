@@ -5,10 +5,11 @@ main {
   display: grid;
   grid-template: 1fr / 2.5fr 6fr 2fr;
   background-color: #0e1113;
+  height: 100%;
 }
 .sidebar {
-  height: 1000px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #3e4142;
+  height: 100%;
 }
