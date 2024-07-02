@@ -18,7 +18,17 @@
     width: 140px;
     height: 88px;
 }
+.postMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.postMain img {
+    margin-left: auto;
+}
+
 .postMain video {
+    margin-left: 20px;
     width: 350px;
 }
 .postTitle {
@@ -31,4 +41,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.postbreak {
+    width: 95%;
+    height: 1px;
+    background-color: #3e4142;
+    margin: 5px auto;
 }
