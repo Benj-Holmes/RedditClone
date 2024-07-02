@@ -3,7 +3,7 @@
 }
 main {
   display: grid;
-  grid-template: 1fr / 2.5fr 6fr 2fr;
+  grid-template: 1fr / 1.75fr 6fr 0.1fr ;
   background-color: #0e1113;
   height: 100%;
 }
@@ -12,4 +12,28 @@ main {
   flex-direction: column;
   border-right: 1px solid #3e4142;
   height: 100%;
+}
+.articleList {
+  display: flex;
+}
+.articleSide {
+  width: 35%;
+}
+.articleSide img {
+  display: none;
+}
+.articleSide video {
+  display: none;
+}
+.articleSide h6 {
+  display: none;
+}
+.articleSide .postBottom {
+  display: none;
+}
+.articleSide .timestamp {
+  display: none;
+}
+.articleSide .redditInfo {
+  margin-left: 5px;
 }

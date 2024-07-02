@@ -25,6 +25,8 @@ export const Subreddits = (props) => {
                 {(subreddits != null) ? 
                     subreddits.map((sub, index) => <Sub key={index} sub={sub.data} /> ) : '' }
             </div>
+            <div className='postbreak'>
+            </div>
         </div>
     );
 };

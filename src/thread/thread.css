@@ -1,0 +1,49 @@
+.opThumbnail {
+    width: 250px;
+}
+.threadDiv {
+    width: 70%;
+}
+.topOP {
+    display: flex;
+    align-items: center;
+    color: #eef1f3;
+    justify-content: flex-start;
+}
+.topOP img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.location {
+    font-weight: bold;
+    font-size: 14px;
+}
+.author {
+    font-size: 10px;
+    margin-top: -10px;
+}
+.timeOP {
+    margin-left: 15px;
+    font-size: 10px;
+}
+.mainOP {
+    display: flex;
+    color: #eef1f3;
+    align-items: flex-start;
+}
+.mainOP img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.postTitle {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0px;
+}
+.postText {
+    margin-top: -20px;
+    padding: 20px;
+}
+.postBottom h6 {
+    color: #eef1f3;
+}

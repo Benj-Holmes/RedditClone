@@ -3,32 +3,55 @@
     width: 100%;
     height: 25px;
     justify-content: space-between;
+    align-items: center;
     padding: 5px;
     max-height: 700px;
+    font-size: 12px;
+    margin-bottom: -15px;
 }
 .post {
     width: 100%;
     color: #eef1f3;
-
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.post:hover {
+    background-color: #181c1f;
 }
 .thumbnailReplacement, .thumbnail {
     border-radius: 5px;
 }
 .thumbnailReplacement {
     width: 140px;
-    height: 88px;
+    height: 90px;
+    display: flex;
+    align-items: center;
 }
 .postMain {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
-.postMain img {
-    margin-left: auto;
+.postBody {
+    display: flex; 
+    align-items: flex-start;
 }
-
+.postImg {
+    margin-left: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.postMain h3 {
+    margin-left: 20px;
+}
 .postMain video {
     margin-left: 20px;
+    margin-bottom: 20px;
     width: 350px;
 }
 .postTitle {
@@ -47,4 +70,59 @@
     height: 1px;
     background-color: #3e4142;
     margin: 5px auto;
+}
+.rIcon {
+    border-radius: 50px;
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.redditInfo {
+    display: flex;
+    align-items: center;
+}
+.userInfo {
+    margin-right: 20px;
+}
+.postBottom {
+    height: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.postBottom div {
+    margin-right: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    font-size: 14px;
+    background-color: #2a3236
+}
+.upvotes {
+    margin-left: 20px;
+}
+.upvotes, .downvotes, .comments {
+    width: 75px;
+}
+h6 {
+    margin-right: 10px;
+}
+.postMain p {
+    margin-top: -5px;
+    font-size: 14px;
+}
+.bottomIcon {
+    height: 30px;
+    width: 65px;
+}
+#downArrow {
+    transform: rotate(180deg);
+}
+.timestamp {
+    margin-left: 10px;
+}
+.link {
+    text-decoration: none;
 }

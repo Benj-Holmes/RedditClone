@@ -18,6 +18,8 @@ export const Nav = (props) => {
                 <img src={all} />  
                 <a> All </a>
             </div>
+            <div className='postbreak'>
+            </div>
         </div>
     );
 };
