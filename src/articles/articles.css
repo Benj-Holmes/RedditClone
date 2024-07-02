@@ -1,0 +1,34 @@
+.postTop {
+    display: flex;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    padding: 5px;
+    max-height: 700px;
+}
+.post {
+    width: 100%;
+    color: #eef1f3;
+
+}
+.thumbnailReplacement, .thumbnail {
+    border-radius: 5px;
+}
+.thumbnailReplacement {
+    width: 140px;
+    height: 88px;
+}
+.postMain video {
+    width: 350px;
+}
+.postTitle {
+    margin-left: 20px;
+}
+
+.postMain p {
+    margin-left: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

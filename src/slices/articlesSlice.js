@@ -19,7 +19,7 @@ export const fetchArticles = createAsyncThunk(
   } catch (err) {
       throw Error(err);
   }
-})
+});
 
 const articlesSlice = createSlice({
     name: 'articles',
@@ -35,21 +35,21 @@ const articlesSlice = createSlice({
           state.subreddit = action.payload;
         }
     },
-    extraReducers: {
-      [fetchArticles.pending]: (state) => {
-          state.loading = true;
-          state.error = null;
-      },
-      [fetchArticles.fulfilled]: (state, action) => {
-          state.posts.splice(0, 1, action.payload.data.children);
-          state.loading = false;
-      },
-      [fetchArticles.rejected]: (state, action) => {
-          state.error = action.error.message;
-          state.loading = false;
-      }
-    }
-})
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchArticles.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(fetchArticles.fulfilled, (state, action) => {
+                state.posts.splice(0, 1, action.payload.data.children);
+                state.loading = false;
+            })
+            .addCase(fetchArticles.rejected, (state, action) => {
+                state.error = action.error.message;
+                state.loading = false;
+            })
+}})
 
 //Selectors
 export const postSelector = state => state.articles.posts[0];
