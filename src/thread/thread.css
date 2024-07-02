@@ -1,8 +1,17 @@
+
 .opThumbnail {
-    width: 250px;
+    width: 150px;
 }
+.articleList {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+} 
 .threadDiv {
-    width: 70%;
+    width: 65%;
+}
+.articleSide {
+    width: 40%;
 }
 .topOP {
     display: flex;
@@ -46,4 +55,7 @@
 }
 .postBottom h6 {
     color: #eef1f3;
+}
+.textOP {
+    max-width: 75%;
 }
