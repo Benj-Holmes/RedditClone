@@ -60,9 +60,11 @@ const threadSlice = createSlice({
 
 //Selectors
 export const threadSelector = state => state.thread.selectedThread;
+
 export const originalPostSelector = state => state.thread.originalPost;
 export const commentsSelector = state => state.thread.comments;
 export const selectLoading = state => state.thread.loading;
+
 
 //Exporting Action Creators and Reducer
 export const { setSelectedThread } = threadSlice.actions;
