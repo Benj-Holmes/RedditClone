@@ -7,11 +7,8 @@
     display: flex;
     justify-content: flex-start; 
 } 
-.threadDiv {
-    width: 65%;
-}
-.articleSide {
-    width: 40%;
+.thread-container {
+    width: 90%;
 }
 .topOP {
     display: flex;
@@ -41,7 +38,7 @@
     align-items: flex-start;
 }
 .mainOP img {
-    margin-right: 10px;
+    margin-right: 30px;
     margin-left: auto;
 }
 .postTitle {
@@ -56,9 +53,9 @@
 .postBottom h6 {
     color: #eef1f3;
 }
-.textOP {
+/* .textOP {
     max-width: 75%;
-}
+} */
 .commentTop {
     display: flex;
     width: 100%;
@@ -107,4 +104,35 @@
     color:#eef1f3;
     font-size: 14px;
     opacity: 0.8;
+    width: 90%;
+}
+.infoBox {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 10px;
+    border-radius: 20px;
+    color:#eef1f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.infoBox div {
+    margin-bottom: -5px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.members {
+    display: flex;
+    flex-direction: column;
+}
+.memberText {
+    margin-top: -15px;
+    font-size: 10px;
 }

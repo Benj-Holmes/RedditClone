@@ -17,7 +17,8 @@ export const Comment = (props) => {
             </div>
             <p className="commentBody"> {comments[props.id].body} </p>
             {/* This Ternary only adds the replies heading to comments which do have reviews */}
-            {(comments[props.id]?.replies?.data?.children != undefined) ? <p class='asideTitles'>Replies</p> : '' }
+            {(comments[props.id]?.replies?.data?.children != undefined) ? 
+                <p class='asideTitles'> Replies </p> : '' }
             {/* This ternary generates the reply components for each reply attached to this comment */}
             {comments[props.id] &&
             comments[props.id].replies &&

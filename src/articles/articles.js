@@ -10,12 +10,14 @@ const Articles = () => {
     const currentSub = useSelector(subSelector);
 
     useEffect(() => {
-        dispatch((fetchArticles(currentSub)))
-    }, [dispatch]);
+        dispatch(fetchArticles(currentSub));
+    }, [dispatch, currentSub]);
 
     return (
         <div className='articlesContainer'>
-            { posts != null ? posts.map((post, index) => <Post key={index} post={post.data} />) : '' }
+            {posts.data != null
+              ? posts.data.children.map((post, index) => <Post key={index} post={post.data} />) 
+              : 'No posts available' }
         </div>
     );
 }

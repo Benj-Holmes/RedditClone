@@ -12,10 +12,9 @@ export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles', 
   async (sub) => {
   try { 
-      const response = await fetch(`https://www.reddit.com`+ sub + `.json`)
+      const response = await fetch(`https://www.reddit.com/${sub}.json`);
       const data = response.json();
       return data;
-      
   } catch (err) {
       throw Error(err);
   }
@@ -42,7 +41,8 @@ const articlesSlice = createSlice({
                 state.error = null;
             })
             .addCase(fetchArticles.fulfilled, (state, action) => {
-                state.posts.splice(0, 1, action.payload.data.children);
+                console.log(`action payload: ${action.payload}`)
+                state.posts = action.payload;
                 state.loading = false;
             })
             .addCase(fetchArticles.rejected, (state, action) => {
@@ -52,7 +52,7 @@ const articlesSlice = createSlice({
 }})
 
 //Selectors
-export const postSelector = state => state.articles.posts[0];
+export const postSelector = state => state.articles.posts;
 export const searchTermSelector = state => state.articles.searchTerm;
 export const subSelector = state => state.articles.subreddit;
 

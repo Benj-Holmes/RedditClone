@@ -16,6 +16,9 @@
     cursor: pointer;
     
 }
+.articleSide {
+    margin-left: -100px;
+}
 .post:hover {
     background-color: #181c1f;
 }
@@ -82,7 +85,7 @@
     align-items: center;
 }
 .userInfo {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 .postBottom {
     height: 50px;
@@ -125,4 +128,7 @@ h6 {
 }
 .link {
     text-decoration: none;
+}
+.articlesContainer {
+    overflow: hidden;
 }

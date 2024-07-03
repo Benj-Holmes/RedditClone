@@ -4,16 +4,19 @@ import PostIcon from '../imgs/ThumbnailReplacer.jpeg';
 import rIcon from '../imgs/rlogo.png';
 import arrow from '../imgs/arrow.png';
 import comments from '../imgs/comment.png';
-import { setSelectedThread } from '../slices/threadSlice';
+import { fetchComments, setSelectedThread, threadSelector } from '../slices/threadSlice';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Post = (props) => {
     const dispatch = useDispatch();
     const downvotes = parseInt(props.post.ups - (props.post.ups * props.post.upvote_ratio));
     const [differenceInHours, setDifferenceInHours] = useState(null);
-    
+    const thread = useSelector(threadSelector);
+
+
     useEffect(() => {
+        // The API returns the creation time of a post in UNIX format, so we must change this to a readable format
         const timestampToHours = () => {          
             const unixTimestamp = props.post.created;
             const currentTimestamp = Math.floor(Date.now() / 1000);
@@ -23,9 +26,15 @@ const Post = (props) => {
         timestampToHours();
     }, [props.post.created]);
 
+    // When a post is clicked, we update the selected thread in state, and fetch its commments so that the page re-renders
+    const handleClick = () => {
+        dispatch(setSelectedThread(props.post.permalink));
+        dispatch(fetchComments(props.post.permalink));
+    }
+
     return (
         <div>
-            <Link to={'/article'} className='link' onClick={() => dispatch(setSelectedThread(props.post.permalink))} >
+            <Link to={'/article'} className='link' onClick={handleClick} >
             <article className='post'>
                 <div className='postTop'>
                     <div className='redditInfo'>
@@ -68,7 +77,6 @@ const Post = (props) => {
                 </article>
             </Link>
             <div className='postbreak'>
-
             </div>
         </div>
     );

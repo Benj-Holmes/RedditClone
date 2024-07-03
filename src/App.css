@@ -3,7 +3,7 @@
 }
 main {
   display: grid;
-  grid-template: 1fr / 1.75fr 6fr 0.1fr ;
+  grid-template: 1fr / 1.75fr 6fr 1fr ;
   background-color: #0e1113;
   height: 100%;
 }
@@ -16,9 +16,7 @@ main {
 .articleList {
   display: flex;
 }
-.articleSide {
-  width: 35%;
-}
+
 .articleSide img {
   display: none;
 }

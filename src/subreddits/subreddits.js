@@ -5,7 +5,7 @@ import { fetchSubreddits } from "../slices/subredditsSlice";
 import { subredditSelector } from "../slices/subredditsSlice";
 import Sub from './sub.js';
 //import { subSelector } from "../../slices/articlesSlice";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const Subreddits = (props) => {   
@@ -21,10 +21,12 @@ export const Subreddits = (props) => {
     return (
         <div>
             <p className="asideTitles">Communities</p>
+            <Link to={'/'} className='link' >
             <div className="subredditsContainer">
                 {(subreddits != null) ? 
                     subreddits.map((sub, index) => <Sub key={index} sub={sub.data} /> ) : '' }
             </div>
+            </Link>
             <div className='postbreak'>
             </div>
         </div>

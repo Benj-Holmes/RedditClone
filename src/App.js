@@ -14,33 +14,77 @@ import SideInfo from './thread/sideInfo';
 
 function App() {
   return (
-    <div id="theme">
-      <header>
-        <Header />
-      </header>
-      <main>
-      <aside className='sidebar'>
-        <div className='navbar'>
-          <Nav />
-        </div>
-        <div>
-          <Subreddits />
-        </div>
-      </aside>
+    // <div id="theme">
+    //   <header>
+    //     <Header />
+    //   </header>
+    //   <main>
+    //   <aside className='sidebar'>
+    //     <div className='navbar'>
+    //       <Nav />
+    //     </div>
+    //     <div>
+    //       <Subreddits />
+    //     </div>
+    //   </aside>
       <article className='articleList'>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={[<Articles key={1} />]} />
-            <Route path='*' element={[<Error key={2} />]} />
-            <Route path='/article' element={[<Thread key={3} />, <div className='articleSide'><SideInfo /><Articles key={4} /></div>]} />
+            <Route path='/' element={[ 
+              <div className='theme'>
+              <header>
+                <Header />
+              </header>
+              <main>
+                <aside className='sidebar'>
+                  <div className='navbar'>
+                    <Nav />
+                  </div>
+                <Subreddits />
+                </aside>
+              <Articles />
+              </main>
+              </div> ]} />
+            <Route path='*' element={[
+              <div className='theme'>
+              <header>
+                <Header />
+              </header>
+              <main>
+                <aside className='sidebar'>
+                  <div className='navbar'>
+                    <Nav />
+                  </div>
+                <Subreddits />
+                </aside>
+                <Error  />
+                </main>
+              </div> ]} />
+            <Route path='/article' element={[ 
+              <div className='theme'>
+              <header>
+                <Header />
+              </header>
+              <main>
+                <aside className='sidebar'>
+                  <div className='navbar'>
+                    <Nav />
+                  </div>
+                  <Subreddits />
+                </aside>
+                <Thread />
+                  <div className='articleSide'> 
+                    <SideInfo /> 
+                    <Articles />
+                  </div>
+              </main>
+              </div> ]} />
           </Routes>
         </BrowserRouter>
       </article>
-      {/* <div className='blankSpace'>
-        <p> You are Viewing the Top Posts from r/Popular </p>
-      </div> */}
-      </main>
-    </div>
+      
+    //   </main>
+    // </div>
   );
 }
 
