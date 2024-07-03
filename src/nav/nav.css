@@ -1,43 +1,24 @@
-.navbar {
-    height: 180px;
+.home img {
+    width: 65px;
+    height: 35px;
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.popular img, .all img {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.popular, .all, .home {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center
 }
-.navbar img {
-    width: 35px;
-    
-}
-#homebutton {
-    width: 60px;
-    margin-top: 5px;
-}
-.navbar div {
-    width: 100%;
-    font-size: 16px;
-    color: #eef1f3;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.navbar span {
-    margin-left: 20px;
-}
-
-
-.popular img {
-   margin-left: 13px;
-   margin-top: 5px;
-}
-.navbar a {
-    width: 100%;
-    height: 80px;
-}
-
 .popular:hover, .all:hover, .home:hover {
     background-color: #181c1f;
 }
-.popular:active, .all:active, .home:active {
-    background-color: #2a3236;
+span {
+    color: #eef1f3;
+    text-decoration: none;
 }
