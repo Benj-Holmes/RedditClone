@@ -39,7 +39,7 @@ const Post = (props) => {
                 <div className='postTop'>
                     <div className='redditInfo'>
                         <img className='rIcon' src={rIcon}/>
-                        <p>{props.post.subreddit_name_prefixed}</p>
+                        <p className='subredditName'>{props.post.subreddit_name_prefixed}</p>
                         <p className='timestamp'> {differenceInHours} hrs Ago </p>
                     </div>
                     <p className='userInfo'>u/{props.post.author}</p>

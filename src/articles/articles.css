@@ -6,8 +6,13 @@
     align-items: center;
     padding: 5px;
     max-height: 700px;
-    font-size: 12px;
     margin-bottom: -15px;
+}
+.userInfo {
+    font-size: 8px;
+}
+.subredditName {
+    font-size: 12px;
 }
 .post {
     width: 100%;
@@ -17,7 +22,10 @@
     
 }
 .articleSide {
-    margin-left: -100px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    min-width: 250px;
 }
 .post:hover {
     background-color: #181c1f;
@@ -125,10 +133,12 @@ h6 {
 }
 .timestamp {
     margin-left: 10px;
+    font-size: 12px;
 }
 .link {
     text-decoration: none;
 }
 .articlesContainer {
     overflow: hidden;
+
 }

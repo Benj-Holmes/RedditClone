@@ -2,32 +2,39 @@
     height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
+    align-items: flex-start;
 }
 .navbar img {
     width: 35px;
+    
 }
 #homebutton {
     width: 60px;
-    padding-top: 5px;
-    margin-left: -12px;
+    margin-top: 5px;
 }
 .navbar div {
-    width: 95%;
-    display:flex;
-    align-items: center;
+    width: 100%;
     font-size: 16px;
     color: #eef1f3;
     cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.popular a, .all a {
-    margin-left: 15px;
+.navbar span {
+    margin-left: 20px;
 }
-.home a {
-    margin-top: 10px;
+
+
+.popular img {
+   margin-left: 13px;
+   margin-top: 5px;
 }
+.navbar a {
+    width: 100%;
+    height: 80px;
+}
+
 .popular:hover, .all:hover, .home:hover {
     background-color: #181c1f;
 }

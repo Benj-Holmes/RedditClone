@@ -10,7 +10,7 @@ export const Comment = (props) => {
     return (
         <>
         {comments[props.id].author && comments[props.id].body ? (
-        <div>
+        <div className="commentContainer">
             <div className="commentTop">
                 <img className='rIcon' src={userIcon} />
                 <p className="author2"> u/{comments[props.id].author} </p> 
