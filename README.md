@@ -23,6 +23,10 @@ Example of the search function:
 
 ![searchfunction](https://github.com/Benj-Holmes/RedditClone/assets/171494109/bcbe13d9-1404-4624-a02a-47bf592acd5d)
 
+Example of Video thread:
+
+![video](https://github.com/Benj-Holmes/RedditClone/assets/171494109/d106a1cf-f229-406c-afa8-0849c6a44fdc)
+
 Example of the loading state:
 
 ![loadingstate](https://github.com/Benj-Holmes/RedditClone/assets/171494109/24e567e9-0697-4e7d-9079-c75a432174a9)
