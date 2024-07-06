@@ -41,7 +41,6 @@ const articlesSlice = createSlice({
                 state.error = null;
             })
             .addCase(fetchArticles.fulfilled, (state, action) => {
-                console.log(`action payload: ${action.payload}`)
                 state.posts = action.payload;
                 state.loading = false;
             })

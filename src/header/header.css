@@ -1,12 +1,16 @@
 .headerContainer {
-    background-color: #0e1113;
     grid-template: 1fr / 0.4fr 1fr 6fr 1fr;
     display: grid;
     width: 100%;
-    color: #eef1f3;
     text-shadow: 0.5px 0.5px #919496;
+}
+#Dark .headerContainer {
+    background-color: #0e1113;
     border-bottom: 1px solid #3e4142;
-
+}
+#Light .headerContainer {
+    background-color: #fff;
+    border-bottom: 1px solid #d3d3d3;
 }
 .logo {
     display: flex;
@@ -17,9 +21,15 @@
     width: 40px;
     height: 40px;
 }
-.title {
+#Dark .title {
     display: flex;
     justify-content: flex-start;
+    color: #eef1f3; 
+}
+#Light .title {
+    display: flex;
+    justify-content: flex-start;
+    color: #ff5d22; 
 }
 .searchBar {
     display: flex;
@@ -32,14 +42,22 @@
     align-items: center;
     width: 75%;
     height: 55%;
-    background-color: #2a3236;
     border-radius: 5px;
+}
+#Dark .searchBox {
+    background-color: #2a3236;
+}
+#Light .searchBox {
+    background-color: #e5ebee;
 }
 input:focus {
     outline: none;
 }
-.searchBox :hover {
+#Dark .searchBox :hover {
     background-color: #333d42;
+}
+#Light .searchBox :hover {
+    background-color: #f6f8f9;
 }
 .searchIcon {
     width: 20px;
@@ -48,12 +66,21 @@ input:focus {
     display: flex;
     justify-content: flex-end;
 }
+#Light .searchIcon {
+    filter: drop-shadow(0px 1000px 0 black);
+    transform: translateY(-1000px);
+}
 .subredditSearch {
     background: 0px 0px;
     width: 100%;
     height: 95%;
     border: none;
+}
+#Dark .subredditSearch {
     color: #eef1f3;
+}
+#Light .subredditSearch {
+    color: black;
 }
 .toggleContainer {
     display: flex;
@@ -61,12 +88,13 @@ input:focus {
     align-items: center;
     margin-right: 20px;
 }
-.dark_mode {
+
+.themeContainer {
     margin-top: -20px;
     margin-left: 10px;
 }
 
-.dark_mode_label {
+.themeLabel {
     width: 65px;
     height: 30px;
     position: relative;
@@ -78,54 +106,36 @@ input:focus {
     cursor: pointer;
     transition: 0.3s;
 }
-.dark_mode_label:after {
+
+.themeLabel:after {
     content: "";
     width: 25px;
     height: 25px;
     position: absolute;
     top: 3px;
     left: 3px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    background: linear-gradient(180deg, #777, #3a3a3a);
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
-.dark_mode_input {
+
+.themeInput {
     width: 0;
     height: 0;
     visibility: hidden;
 }
-.dark_mode_input:checked + .dark_mode_label {
+
+.themeInput:checked + .themeLabel {
     background: #242424;
 }
-.dark_mode_input:checked + .dark_mode_label:after {
-    left: 62px;
+
+.themeInput:checked + .themeLabel:after {
+    left: calc(100% - 3px);
     transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-}
-.dark_mode_label:active:after {
-    width: 30px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
 }
 
-.dark_mode_label svg {
-    position: absolute;
-    width: 20px;
-    top: 5px;
-    z-index: 100;
-}
-.dark_mode_label svg.sun {
-    left: 5px;
-    fill: #fff;
-    transition: 0.3s;
-}
-.dark_mode_label svg.moon {
-    left: 40px;
-    fill: #7e7e7e;
-    transition: 0.3s;
-}
-.dark_mode_input:checked + .dark_mode_label svg.sun {
-    fill: #7e7e7e;
-}
-.dark_mode_input:checked + .dark_mode_label svg.moon {
-    fill: #fff;
+.themeLabel:active:after {
+    width: 30px;
 }

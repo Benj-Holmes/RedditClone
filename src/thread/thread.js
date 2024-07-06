@@ -7,10 +7,10 @@ import { useEffect } from "react";
 import { OriginalPost } from "./originalPost";
 import { Comment } from "./comment";
 import { selectLoading } from "../slices/threadSlice";
-// import { Puff } from "react-loading-icons";
+import { PuffLoader } from "react-spinners";
 
 
-export const Thread = (props) => { 
+export const Thread = () => { 
     const dispatch = useDispatch();
     const thread = useSelector(threadSelector);
     const comments = useSelector(commentsSelector)
@@ -20,14 +20,21 @@ export const Thread = (props) => {
         dispatch(fetchComments(thread))
     }, [dispatch]);
 
+
+    // Scrolls the window back to the top of the page when the user selects a new thread
+    useEffect(() => {
+        window.scrollTo(0, 0); 
+    }, [thread]); 
+
+
     
     return (
         
         <div className="threadDiv">
             { isLoading ? 
-                <div className="loading-handler">
-                <p className="loading"> Loading.. </p>
-                {/* <Puff className="puff" stroke='#000'/> */}
+                <div className="loadingHandler">
+                    <p className="loading"> Loading.. </p>
+                    <PuffLoader className="puff" stroke='#000' size={150}/>
                 </div>
                : 
                <div className="thread-container">

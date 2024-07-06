@@ -4,19 +4,26 @@
 main {
   display: grid;
   grid-template: 1fr / 1.75fr 6fr 1fr ;
-  background-color: #0e1113;
   height: 100%;
 }
+#Dark main {
+  background-color: #0e1113;
+}
+#Light main {
+  background-color: #fff;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #3e4142;
   height: 100%;
 }
-.articleList {
-  display: flex;
+#Dark .sidebar {
+border-right: 1px solid #3e4142;
 }
-
+#Light .sidebar {
+  border-right: 1px solid #d3d3d3;
+}
 .articleSide img {
   display: none;
 }

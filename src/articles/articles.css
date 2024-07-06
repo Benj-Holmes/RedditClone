@@ -14,21 +14,30 @@
 .subredditName {
     font-size: 12px;
 }
-.post {
+#Light .post {
+    width: 100%;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#Dark .post {
     width: 100%;
     color: #eef1f3;
     border-radius: 20px;
     cursor: pointer;
-    
 }
+
 .articleSide {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
     min-width: 250px;
 }
-.post:hover {
+#Dark .post:hover {
     background-color: #181c1f;
+}
+#Light .post:hover {
+    background-color: #d3d3d3;
 }
 .thumbnailReplacement, .thumbnail {
     border-radius: 5px;
@@ -76,17 +85,27 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.postbreak {
+#Light .postbreak {
     width: 95%;
     height: 1px;
-    background-color: #3e4142;
     margin: 5px auto;
+    background-color: #d3d3d3;
 }
+#Dark .postbreak {
+    width: 95%;
+    height: 1px;
+    margin: 5px auto;
+    background-color: #3e4142;
+  }
 .rIcon {
     border-radius: 50px;
     height: 25px;
     margin-left: 20px;
     margin-right: 5px;
+}
+#Light .rIcon {
+    filter: drop-shadow(0px 100000px 0 black);
+    transform: translateY(-100000px);
 }
 .redditInfo {
     display: flex;

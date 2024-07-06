@@ -11,8 +11,13 @@
 .topOP {
     display: flex;
     align-items: center;
-    color: #eef1f3;
     justify-content: flex-start;
+}
+#Dark .topOP {
+    color: #eef1f3;
+}
+#Light .topOP {
+    color: black;
 }
 .topOP img {
     margin-left: 10px;
@@ -30,12 +35,20 @@
     margin-left: 15px;
     font-size: 10px;
 }
+.textOP {
+    width: 70%;
+}
 .mainOP {
     display: flex;
-    color: #eef1f3;
     align-items: flex-start;
 }
-.mainOP img {
+#Dark .mainOP {
+    color: #eef1f3;
+}
+#Light .mainOP {
+    color: black;
+}
+.mainOP embed {
     margin-right: 30px;
     margin-left: auto;
 }
@@ -51,23 +64,24 @@
 .postBottom h6 {
     color: #eef1f3;
 }
-/* .textOP {
-    max-width: 75%;
-} */
 .commentTop {
     display: flex;
     width: 100%;
     height: 30px;
     align-items: center;
-    color: #eef1f3;
     font-weight: bold;
     font-size: 14px;
+}
+#Dark .commentContainer {
+    color: #eef1f3;
+}
+#Light .commentContainer {
+    color: black;
 }
 .commentBody {
     margin: 0px auto;
     width: 85%;
     padding: 5px;
-    color: #eef1f3;
     font-size: 14px;
     margin-bottom: 10px;
     word-break: break-word;
@@ -86,6 +100,10 @@
     width: 65px;
     opacity: 0.3;
 }
+#Light .replyIcon img {
+    filter: drop-shadow(0px 5000px 0 black);
+    transform: translateY(-5000px);
+}
 .replyTop {
     display: flex;
     justify-content: flex-start;
@@ -96,17 +114,21 @@
     margin-right: 5px;
 }
 .replyTop p {
-    color: #eef1f3;
     font-weight: bold;
     font-size: 14px;
 }
 .replyBody {
     margin-top: -20px;
-    color:#eef1f3;
     font-size: 14px;
     opacity: 0.8;
     word-break: break-word;
     overflow-wrap: break-word;
+}
+#Dark .reply {
+    color:#eef1f3;
+}
+#Light .reply {
+    color:black;
 }
 .infoBox {
     width: 100%;
@@ -143,3 +165,36 @@
 .commentContainer {
     max-width: 90%;
 }
+.videoContainer {
+    flex-basis: 100%;
+}
+.mainOP {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .flex-item {
+    flex: 1 1 auto; 
+  }
+  .videoContainer {
+    flex-basis: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .videoOP {
+    max-width: 480px;
+  }
+  .videoContainer .flex-item {
+    width: 100%; 
+  }
+  .loadingHandler {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .puff-loader {
+    color: red;
+  }

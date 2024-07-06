@@ -6,6 +6,7 @@ const SideInfo = () => {
     const post = useSelector(originalPostSelector);
 
     return (
+        <>
         <div className='infoBox'>
             <div className='name'>{post.subreddit_name_prefixed}</div>
             <div className='members'>
@@ -13,6 +14,9 @@ const SideInfo = () => {
                 <p className='memberText'>Members</p>
             </div>
         </div>
+        <div className='postbreak'>
+        </div>
+        </>
     );
 }
 

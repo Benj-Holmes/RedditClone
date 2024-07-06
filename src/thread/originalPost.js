@@ -10,7 +10,6 @@ export const OriginalPost = () => {
     const op = useSelector(originalPostSelector);
     const downvotes = parseInt(op.ups - (op.ups * op.upvote_ratio));
     const [differenceInHours, setDifferenceInHours] = useState(null);
-    console.log(op.created);
 
     useEffect(() => {
         const unixTimestamp = op.created;
@@ -34,7 +33,12 @@ export const OriginalPost = () => {
                     <p className="postTitle">{op.title}</p>
                     <p className="postText">{op.selftext}</p>
                 </div>
-                {(op.thumbnail != null && op.thumbnail != 'self') ? <img className='opThumbnail' src={op.thumbnail} /> : '' }
+                {(op.thumbnail != null && op.thumbnail != 'self') ? <embed className='opThumbnail' src={op.thumbnail} /> : '' }
+                {(op.media?.reddit_video.fallback_url != null) ?
+                <div className="videoContainer"> 
+                    <video className='videoOP' src={op.media.reddit_video.fallback_url} autoPlay controls/> 
+                </div>
+                : ''}
             </div>
             <div className='postBottom'>
                             <div className='upvotes'>

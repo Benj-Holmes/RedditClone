@@ -15,10 +15,22 @@
     display: flex;
     align-items: center
 }
-.popular:hover, .all:hover, .home:hover {
+#Dark .popular:hover, .all:hover, .home:hover {
     background-color: #181c1f;
 }
-span {
+#Light .popular:hover, .all:hover, .home:hover {
+    background-color: #e5ebee;
+}
+#Dark span {
     color: #eef1f3;
     text-decoration: none;
+}
+#Light span {
+    color: black;
+    text-decoration: none;
+}
+
+#Light .home img, #Light .popular img, #Light .all img {
+    filter: drop-shadow(0px 1000px 0 black);
+    transform: translateY(-1000px);
 }

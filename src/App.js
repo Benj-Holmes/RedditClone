@@ -1,5 +1,5 @@
 import './App.css';
-import Header from "./header/header";
+import Header from './header/header';
 import Nav from './nav/nav';
 import Subreddits from './subreddits/subreddits';
 import Articles from './articles/articles';
@@ -11,27 +11,17 @@ import {
   Route
 } from 'react-router-dom';
 import SideInfo from './thread/sideInfo';
+import { themeSelector } from './slices/themeSlice';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const theme = useSelector(themeSelector);
   return (
-    // <div id="theme">
-    //   <header>
-    //     <Header />
-    //   </header>
-    //   <main>
-    //   <aside className='sidebar'>
-    //     <div className='navbar'>
-    //       <Nav />
-    //     </div>
-    //     <div>
-    //       <Subreddits />
-    //     </div>
-    //   </aside>
-      <article className='articleList'>
+      <article id={theme}>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={[ 
-              <div className='theme'>
+              <div>
               <header>
                 <Header />
               </header>
@@ -46,7 +36,7 @@ function App() {
               </main>
               </div> ]} />
             <Route path='*' element={[
-              <div className='theme'>
+              <div>
               <header>
                 <Header />
               </header>
@@ -61,7 +51,7 @@ function App() {
                 </main>
               </div> ]} />
             <Route path='/article' element={[ 
-              <div className='theme'>
+              <div>
               <header>
                 <Header />
               </header>
@@ -82,9 +72,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </article>
-      
-    //   </main>
-    // </div>
   );
 }
 
