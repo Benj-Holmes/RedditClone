@@ -34,7 +34,7 @@ export const Thread = () => {
             { isLoading ? 
                 <div className="loadingHandler">
                     <p className="loading"> Loading.. </p>
-                    <PuffLoader className="puff" stroke='#000' size={150}/>
+                    <PuffLoader className="puff" stroke='#cccccc' size={150}/>
                 </div>
                : 
                <div className="thread-container">

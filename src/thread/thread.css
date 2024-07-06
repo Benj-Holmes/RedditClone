@@ -194,7 +194,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 2px 0 black;
+    color: #CCCCCC;
   }
-  .puff-loader {
-    color: red;
-  }
+ 
