@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Reddit Clone 
+A React and Redux project using API calls to mimic rediit's features.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+This project was created to test my skills of using both React and Redux, the user can search for any subreddit, select from a list of popular ones, and then select a thread to read. This project does not use the full reddit API so that the user does not need to log in to access anything, because of this some of reddits features are not present, but otherwise i am very happy with the turnout and i think i have used the API to its fullest potential.
 
-## Available Scripts
+ While making this project i gained an understanding why redux is often used for state management, and i can see why it would only become more useful the bigger the app becomes, it is very convienient to be able to use part of your state at any time with a selector, and it's much simpler than passing state down through layers of components.
+ 
+I added some extra features like a toggle for a light and dark mode, responsive design for all devices and a loading state to display before the API call finishes to make the app feel more complete.
 
-In the project directory, you can run:
+## Site Demonstration
+Example of Desktop site with light and dark modes:
 
-### `npm start`
+![mainsite](https://github.com/Benj-Holmes/RedditClone/assets/171494109/2b0bc6ed-3e9e-4cbb-bac6-406d26e6789b)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![mainsitelight](https://github.com/Benj-Holmes/RedditClone/assets/171494109/427f77b6-1baf-456f-88d2-52cb1b62ada5)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Example of an opened reddit thread:
 
-### `npm test`
+![thread](https://github.com/Benj-Holmes/RedditClone/assets/171494109/448449aa-ad02-4043-956b-553beed381ac)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Example of the search function:
 
-### `npm run build`
+![searchfunction](https://github.com/Benj-Holmes/RedditClone/assets/171494109/bcbe13d9-1404-4624-a02a-47bf592acd5d)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example of Video thread:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![video](https://github.com/Benj-Holmes/RedditClone/assets/171494109/d106a1cf-f229-406c-afa8-0849c6a44fdc)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Example of the loading state:
 
-### `npm run eject`
+![loadingstate](https://github.com/Benj-Holmes/RedditClone/assets/171494109/24e567e9-0697-4e7d-9079-c75a432174a9)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
