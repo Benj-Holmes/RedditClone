@@ -46,8 +46,8 @@ border-right: 1px solid #3e4142;
 
 /* Media Queries for different screen sizes below */
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+ /* Extra small devices */
+ @media only screen and (min-width: 200px) and (max-width: 600px) {
   .title h2 {
     display: none;
   }
@@ -119,20 +119,61 @@ border-right: 1px solid #3e4142;
   .post .postMain h3 {
     margin-left: 10px;
   }
+  .mainOP embed {
+    margin-right: auto !important;
+    margin-bottom: 20px;
+    margin-top: -20px;  
+}
  }
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-
+ /* Small devices */
+ @media only screen and (min-width: 601px) and (max-width: 992px) {
+  .title h2 {
+    margin-left: 10px;
+  }
+  .headerContainer .logo {
+    margin-left: 5px;
+  }
+  main .sidebar {
+    font-size: 12px;
+    min-width: 150px;
+  }
+  .subMenu .menuTitle button {
+    margin-left: 0;
+  }
+  .menuTitle .asideTitles {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .subTitle {
+    overflow: hidden;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .sidebar {
+    flex: 1 0 75%;
+    max-width: 25%;
+  }
+  main .threadDiv {
+    flex: 1 0 25%;
+    max-width: 75%;
+  }
+  main .articlesContainer {
+    flex: 1 0 25%;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .articleSide {
+    flex-basis: 100%;
+  }
+  .mainOP embed {
+    margin-right: auto !important;
+    margin-bottom: 20px;
+    margin-top: -20px;
+  }
  }
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
 
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
-
- }
  
