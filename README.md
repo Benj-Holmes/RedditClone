@@ -17,7 +17,7 @@ Example of Desktop site with light and dark modes:
 
 Example of an opened reddit thread:
 
-![thread](https://github.com/Benj-Holmes/RedditClone/assets/171494109/4400363c-0f25-4146-85ad-249b2d72553c)
+![thread](https://github.com/Benj-Holmes/RedditClone/assets/171494109/448449aa-ad02-4043-956b-553beed381ac)
 
 Example of the search function:
 
