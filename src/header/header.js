@@ -15,16 +15,17 @@ const Header = () => {
 
     // Debounce function for handling search input delays
     const updateSearch = _.debounce((value) => {
-        dispatch(setSubreddit(value)); // Update Redux store with search term
+        dispatch(setSubreddit(value)); 
         
     }, 300);
 
     // Event handler for input change
     const handleInputChange = (event) => {
         const { value } = event.target;
-        updateSearch(value); // Trigger debounce function with input value
+        updateSearch(value);
     };
 
+    // Changes the state between light and dark, which we use to determine our light and dark mode.
     const dispatchToggle = (event) => {
         event.preventDefault();
         event.stopPropagation();

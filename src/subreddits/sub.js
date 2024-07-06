@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux';
 import { fetchArticles, setSubreddit } from '../slices/articlesSlice';
 
 const Sub = (props) => {
-
     const dispatch = useDispatch();
 
+    // This function and the Link tag below rerender the page if the user wants to go to another subreddit.
     const handleClick = () => {
         dispatch(setSubreddit(props.sub.url));
         dispatch(fetchArticles(props.sub.url));

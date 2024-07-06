@@ -9,6 +9,7 @@ const Articles = () => {
     const posts = useSelector(postSelector);
     const currentSub = useSelector(subSelector);
 
+    // On page load, and when the current sub is selected, we dispatch the action to populate the list of articles.
     useEffect(() => {
         dispatch(fetchArticles(currentSub));
     }, [dispatch, currentSub]);

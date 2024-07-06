@@ -11,6 +11,7 @@ export const OriginalPost = () => {
     const downvotes = parseInt(op.ups - (op.ups * op.upvote_ratio));
     const [differenceInHours, setDifferenceInHours] = useState(null);
 
+    // The API returns a unix timestamp of creation so we must change this to a user readable format
     useEffect(() => {
         const unixTimestamp = op.created;
         const currentTimestamp = Math.floor(Date.now() / 1000);
@@ -33,6 +34,7 @@ export const OriginalPost = () => {
                     <p className="postTitle">{op.title}</p>
                     <p className="postText">{op.selftext}</p>
                 </div>
+                {/* In these two ternarys we check if the post contains an image, video or nothing and render based on that */}
                 {(op.thumbnail != null && op.thumbnail != 'self') ? <embed className='opThumbnail' src={op.thumbnail} /> : '' }
                 {(op.media?.reddit_video.fallback_url != null) ?
                 <div className="videoContainer"> 

@@ -31,6 +31,7 @@ export const Thread = () => {
     return (
         
         <div className="threadDiv">
+            {/* Checks the loading state to display an effect while fetching resources */}
             { isLoading ? 
                 <div className="loadingHandler">
                     <p className="loading"> Loading.. </p>

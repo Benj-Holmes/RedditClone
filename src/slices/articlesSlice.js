@@ -7,7 +7,7 @@ const initialState = {
     error: null
 };
 
-//Thunk for Async Calls
+//Thunk for Async Call, fetches the details of the selected subreddit, or of r/popular on page load.
 export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles', 
   async (sub) => {

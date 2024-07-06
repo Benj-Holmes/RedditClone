@@ -13,14 +13,9 @@ const initialState = {
 export const fetchComments = createAsyncThunk(
     'thread/fetchComments', 
     async (thread) => {
-    //try {
         const response = await fetch(`https://www.reddit.com${thread}.json`)
         const data = response.json();
-        // console.log(data)
         return data;
-    //} catch (err) {
-        //throw Error(err);
-    //}
 })
 
 const threadSlice = createSlice({

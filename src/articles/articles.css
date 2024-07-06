@@ -56,7 +56,7 @@
 }
 .postBody {
     display: flex; 
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 .postImg {
     margin-left: auto;

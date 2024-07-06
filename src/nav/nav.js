@@ -9,6 +9,7 @@ import { fetchArticles, setSubreddit } from '../slices/articlesSlice';
 export const Nav = (props) => {   
     const dispatch = useDispatch();
 
+    // Clicking on the link tags below sends the selected subreddit to the state, and then calls for the articles of that subreddit.
     const handleChange = (sub) => {
         dispatch(setSubreddit(sub));
         dispatch(fetchArticles(sub));
@@ -24,13 +25,13 @@ export const Nav = (props) => {
             </Link>
             <Link to={'/'} onClick={() => handleChange('r/popular')}>
             <div className='popular'>
-                <img src={popular} />  
+                <img id='popbutton' src={popular} />  
                 <span> Popular </span>
             </div>
             </Link>
             <Link to={'/'} onClick={() => handleChange('r/all')}>
             <div className='all'>
-                <img src={all}/>  
+                <img id='allbutton' src={all}/>  
                 <span> All </span>
             </div>
             </Link>

@@ -38,3 +38,29 @@
 .subTitle {
     margin-right: 5px;
 }
+.menuTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuTitle button {
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+#Dark .menuTitle button {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid lightslategrey;
+}
+#Light .menuTitle button {
+    border: 1px solid black;
+}

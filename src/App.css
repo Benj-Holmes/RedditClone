@@ -17,6 +17,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-width: 250px;
 }
 #Dark .sidebar {
 border-right: 1px solid #3e4142;
@@ -42,3 +43,96 @@ border-right: 1px solid #3e4142;
 .articleSide .redditInfo {
   margin-left: 5px;
 }
+
+/* Media Queries for different screen sizes below */
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+  .title h2 {
+    display: none;
+  }
+  .headerContainer {
+    height: 50px;
+  }
+  .headerContainer .logo img {
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+  }
+  .searchBox .searchIcon {
+    height: 10px;
+    width: 15px;
+    margin-left: 5px;
+  }
+  .toggleContainer .themeContainer .themeLabel {
+    height: 20px;
+    width: 50px;
+  }
+  .themeContainer .themeLabel:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #777, #3a3a3a);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .home, .navbar .popular, .navbar .all {
+    margin: 0px 20px;
+  }
+
+  #homebutton {
+    height: 20px;
+    width: 40px;
+  }
+  #popbutton, #allbutton {
+    height: 20px;
+    width: 20px;
+  }
+  main {
+    display: grid;
+    grid-template: 1fr / 1fr !important;
+  }
+  .post .postBody {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+ 
+  .postBody .postImg {
+    margin-right: auto;
+    padding: 0px;
+  }
+  .postMain p {
+    width: 90%;
+  }
+  .post .postMain video {
+    margin-left: 15px;
+  }
+  .post .postMain h3 {
+    margin-left: 10px;
+  }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
