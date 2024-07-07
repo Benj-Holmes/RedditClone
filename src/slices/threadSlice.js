@@ -9,7 +9,7 @@ const initialState = {
 };
 
 
-//Thunk for Async Calls
+//Thunk for Async Call of the comments for the selected thread.
 export const fetchComments = createAsyncThunk(
     'thread/fetchComments', 
     async (thread) => {
