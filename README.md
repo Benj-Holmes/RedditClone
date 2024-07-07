@@ -8,6 +8,9 @@ This project was created to test my skills of using both React and Redux, the us
  
 I added some extra features like a toggle for a light and dark mode, responsive design for all devices and a loading state to display before the API call finishes to make the app feel more complete.
 
+## Demo
+A Live demo of this site can be found at: https://reddit-clone-kappa-three.vercel.app/
+
 ## Site Demonstration
 Example of Desktop site with light and dark modes:
 
