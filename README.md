@@ -27,6 +27,16 @@ Example of Video thread:
 
 ![video](https://github.com/Benj-Holmes/RedditClone/assets/171494109/d106a1cf-f229-406c-afa8-0849c6a44fdc)
 
+Example of Responsive Design:
+
+Small Device:
+
+![small device](https://github.com/Benj-Holmes/RedditClone/assets/171494109/e7b7e551-c001-449d-bf31-b60d545b9143)
+
+Middle-Size Device:
+
+![middevice](https://github.com/Benj-Holmes/RedditClone/assets/171494109/d2e1a72d-7efc-40c8-a3cb-b733a2fa8436)
+
 Example of the loading state:
 
 ![loadingstate](https://github.com/Benj-Holmes/RedditClone/assets/171494109/24e567e9-0697-4e7d-9079-c75a432174a9)
