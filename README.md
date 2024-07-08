@@ -40,6 +40,10 @@ Middle-Size Device:
 
 ![middevice](https://github.com/Benj-Holmes/RedditClone/assets/171494109/d2e1a72d-7efc-40c8-a3cb-b733a2fa8436)
 
+Example of the State, stored in the Store:
+
+![state](https://github.com/Benj-Holmes/RedditClone/assets/171494109/2cbdf463-f306-47ce-bc96-0a165b24dc24)
+
 Example of the loading state:
 
 ![loadingstate](https://github.com/Benj-Holmes/RedditClone/assets/171494109/24e567e9-0697-4e7d-9079-c75a432174a9)
