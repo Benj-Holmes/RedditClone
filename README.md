@@ -1,5 +1,5 @@
 # Reddit Clone 
-A React and Redux project using API calls to mimic rediit's features.
+A React and Redux project using API calls to mimic reddit's features.
 
 ## Project Description
 This project was created to test my skills of using both React and Redux, the user can search for any subreddit, select from a list of popular ones, and then select a thread to read. This project does not use the full reddit API so that the user does not need to log in to access anything, because of this some of reddits features are not present, but otherwise i am very happy with the turnout and i think i have used the API to its fullest potential.
